@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Währungsrechner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Währungsrechner</h1>
+
+    <!-- Dropdown für Währungen -->
+    <section class="converter">
+        <label for="amount">Betrag:</label>
+        <input type="number" id="amount" placeholder="Betrag eingeben">
+
+        <label for="fromCurrency">Von:</label>
+        <select id="fromCurrency"></select>
+
+        <label for="toCurrency">Zu:</label>
+        <select id="toCurrency"></select>
+
+        <button id="convertBtn">Umrechnen</button>
+
+        <!-- Ergebnis der Umrechnung -->
+        <div class="result">
+            <p>Ergebnis:</p>
+            <p id="result">0.00</p>
+        </div>
+    </section>
+
+    <!-- Favoritenliste -->
+    <section class="favorites">
+        <h2>Favoriten:</h2>
+        <ul id="favoriteList"></ul>
+    </section>
+
+    <!-- JavaScript einbinden -->
+    <script src="script.js"></script>
+</body>
+</html>
