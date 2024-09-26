@@ -4,38 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Währungsrechner</title>
+
+    <!-- Verlinkung zur CSS-Datei (styles.css) -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Einbindung der Chart.js-Bibliothek -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <h1>Währungsrechner</h1>
 
-    <!-- Dropdown für Währungen -->
+    <!-- Betragseingabe und Dropdowns -->
     <section class="converter">
-        <label for="amount">Betrag:</label>
-        <input type="number" id="amount" placeholder="Betrag eingeben">
+        <div class="currency-row">
+            <label for="amount">Betrag:</label>
+            <input type="number" id="amount" placeholder="Betrag eingeben">
+        </div>
 
-        <label for="fromCurrency">Von:</label>
-        <select id="fromCurrency"></select>
+        <div class="currency-row">
+            <label for="fromCurrency">Von:</label>
+            <select id="fromCurrency"></select>
 
-        <label for="toCurrency">Zu:</label>
-        <select id="toCurrency"></select>
+            <!-- Switch-Button (links vom "Zu") -->
+            <button id="switchBtn" class="switch-button">🔄</button>
+
+            <label for="toCurrency">Zu:</label>
+            <select id="toCurrency"></select>
+        </div>
 
         <button id="convertBtn">Umrechnen</button>
+    </section>
 
-        <!-- Ergebnis der Umrechnung -->
-        <div class="result">
-            <p>Ergebnis:</p>
-            <p id="result">0.00</p>
+    <!-- Ergebnis der Umrechnung -->
+    <div class="result">
+        <p>Ergebnis:</p>
+        <p id="result">0.00</p>
+    </div>
+
+    <!-- Diagrammfeld für das Verhältnis der Währungen -->
+    <section class="chart-container">
+        <canvas id="currencyChart"></canvas> <!-- Das Diagramm wird hier angezeigt -->
+    </section>
+
+    <!-- Verlaufsübersicht -->
+    <section class="history">
+        <h2>Verlauf:</h2>
+        <ul id="historyList"></ul>
+    </section>
+
+    <!-- Favoriten-Button -->
+    <button id="favoritesBtn">Favoriten</button>
+
+    <!-- Pop-up für Favoriten -->
+    <div id="favoritesPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Gespeicherte Favoriten</h2>
+            <ul id="favoritesList"></ul>
         </div>
-    </section>
+    </div>
 
-    <!-- Favoritenliste -->
-    <section class="favorites">
-        <h2>Favoriten:</h2>
-        <ul id="favoriteList"></ul>
-    </section>
+    <!-- Anleitung-Button -->
+    <button id="instructionsBtn" class="bottom-left">Anleitung</button>
 
-    <!-- JavaScript einbinden -->
+    <!-- Pop-up für Anleitung -->
+    <div id="instructionsPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Wie benutze ich die Website?</h2>
+            <p>1. Gebe den Betrag ein, den du umrechnen möchtest.</p>
+            <p>2. Wähle im Dropdown-Menü "Von" die Ausgangswährung aus.</p>
+            <p>3. Wähle im Dropdown-Menü "Zu" die Zielwährung aus.</p>
+            <p>4. Klicke auf "Umrechnen", um das Ergebnis zu sehen.</p>
+            <p>5. Du kannst eine Umrechnung als Favorit speichern, indem du auf den Stern klickst.</p>
+            <p>6. Klicke auf "Favoriten", um gespeicherte Umrechnungen anzuzeigen.</p>
+        </div>
+    </div>
+
+    <!-- Dark Mode Button -->
+    <button id="darkModeToggle" class="top-right">🌙 Dark Mode</button>
+
+    <!-- JavaScript-Datei verknüpfen -->
     <script src="script.js"></script>
 </body>
 </html>

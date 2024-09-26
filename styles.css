@@ -1,79 +1,312 @@
-/* Reset für saubere Darstellung */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Standardfarben (Light Mode) */
+:root {
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --button-background-color: #4caf50;
+    --button-text-color: white;
+    --popup-background-color: white;
+    --popup-text-color: #333;
+    --result-color: #333;
+    --result-background-light: #e0ffe0;
+    --history-box-background-color: #e9e9e9;
+    --history-text-color: #333;
+}
+
+/* Dark Mode Farben */
+body.dark-mode {
+    --background-color: #1e1e1e;
+    --text-color: #ffffff;
+    --button-background-color: #6b8e23;
+    --button-text-color: white;
+    --popup-background-color: #333;
+    --popup-text-color: #ffffff;
+    --result-color: #ffffff;
+    --result-background-dark: #373a38;
+    --history-box-background-color: #5a5a5a;
+    --history-text-color: #ffffff;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
     padding: 20px;
     text-align: center;
 }
 
 h1 {
-    color: #4caf50;
+    color: var(--button-background-color);
 }
 
 .converter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    margin: 10px 0 5px;
+/* Label und Eingabefeld-Abstände anpassen */
+.converter label {
+    margin-right: 10px; /* Abstand zwischen Label und Feld */
 }
 
-input, select, button {
-    padding: 10px;
-    font-size: 16px;
+.converter input, .converter select {
+    margin-bottom: 10px;
+    height: 45px; /* Höhe der Felder vergrößert */
+    font-size: 18px; /* Schriftgröße vergrößert */
+    border-radius: 8px; /* Ecken abgerundet */
+    padding: 5px;
+}
+
+/* Vergrößerung der Felder */
+.converter input {
+    width: 180px;
+    margin-right: 20px;
+}
+
+.converter select {
+    width: 180px;
+}
+
+/* Flexbox für die Dropdown- und Switch-Button-Reihen */
+.converter .currency-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 10px;
 }
 
-button {
-    background-color: #4caf50;
-    color: white;
-    cursor: pointer;
+/* Switch-Button in derselben Höhe wie "Zu" */
+.switch-button {
+    margin-left: 10px;
+    background-color: transparent;
+    color: var(--button-background-color);
     border: none;
-    padding: 10px 20px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center; /* Gleiche Höhe wie das Dropdown "Zu" */
 }
 
-button:hover {
+.switch-button:hover {
+    color: #45a049;
+}
+
+/* Button-Styling für Umrechnen, Favoriten, Anleitung */
+button, #convertBtn, #favoritesBtn, #instructionsBtn {
+    background-color: var(--button-background-color);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover, #convertBtn:hover, #favoritesBtn:hover, #instructionsBtn:hover {
     background-color: #45a049;
 }
 
+/* Ergebnisbox */
 .result {
     margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--result-background-light);
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--button-background-color);
+    color: var(--result-color);
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.favorites {
-    margin-top: 20px;
+body.dark-mode .result {
+    background-color: var(--result-background-dark); /* Dunkles Grün für Dark Mode */
 }
 
-#favoriteList {
-    list-style-type: none;
+/* Diagrammfeld */
+.chart-container {
+    margin: 20px 0;
+    width: 80%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var(--button-background-color);
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #f4f4f9; /* Heller Hintergrund für Diagramm */
 }
 
-#favoriteList li {
+body.dark-mode .chart-container {
+    background-color: #333; /* Dunkler Hintergrund im Dark Mode */
+}
+
+/* Verlauf */
+#historyList li {
     padding: 10px;
     margin: 10px 0;
-    background-color: #e9e9e9;
+    background-color: var(--history-box-background-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     border-radius: 4px;
+    min-height: 50px;
+    position: relative;
+    color: var(--history-text-color);
 }
 
-#favoriteList li button {
+#historyList li .remove {
     background-color: #ff5c5c;
     border: none;
     color: white;
     padding: 5px 10px;
     cursor: pointer;
+    position: absolute;
+    right: 10px;
 }
 
-#favoriteList li button:hover {
+#historyList li .remove:hover {
     background-color: #e04e4e;
+}
+
+/* Favoriten-Stern */
+.star {
+    font-size: 24px;
+    cursor: pointer;
+    color: transparent;
+    border: 2px solid #FFD700; /* Gelber Rand */
+    border-radius: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 26px;
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+.star.filled {
+    background-color: #FFD700; /* Gelb gefüllter Stern */
+    color: white;
+}
+
+#favoritesBtn {
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 12px;
+}
+
+/* Pop-up Fenster */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+    background-color: var(--popup-background-color);
+    color: var(--popup-text-color); /* Weiße Schrift in Pop-ups */
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.popup .close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#favoritesList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+#favoritesList li .remove-favorite {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: auto; /* Rechtsbündig */
+}
+
+#favoritesList li .remove-favorite:hover {
+    color: darkred;
+}
+
+/* Dark Mode Button */
+#darkModeToggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#darkModeToggle:hover {
+    background-color: var(--button-background-color);
+}
+
+/* Anleitung Button (links unten) */
+#instructionsBtn {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: var(--button-background-color);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+}
+
+#instructionsBtn:hover {
+    background-color: var(--button-background-color);
+}
+
+/* Flexbox-Anpassungen für Dropdowns und Switch-Button */
+.converter select {
+    margin: 0 10px;
+    width: 180px;
+    height: 45px;
+    font-size: 18px; /* Schriftgröße vergrößert */
+    border-radius: 8px; /* Ecken abgerundet */
+}
+
+.converter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.converter .currency-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.converter input {
+    width: 180px;
+    height: 45px; /* Höhe vergrößert */
+    font-size: 18px; /* Schriftgröße vergrößert */
+    border-radius: 8px; /* Ecken abgerundet */
+    margin-right: 20px;
 }
