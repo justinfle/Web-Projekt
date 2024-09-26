@@ -1,9 +1,5 @@
 # Web-Projekt
  
-Entschuldigung für die Unterbrechung! Hier ist die vollständige README.md im Markdown-Format, wie gewünscht:
-
-markdown
-Code kopieren
 # Währungsrechner 🌍💱
 
 Ein umfassendes Tool zur Umrechnung von Währungen, das Echtzeit-Wechselkurse über die **Open Exchange Rates API** verwendet und zusätzliche Funktionen wie **Favoriten**, **Verlauf**, **Diagramm-Darstellungen** und einen **Dark Mode** bietet. Dieser Währungsrechner ist ideal für Benutzer, die schnell und zuverlässig zwischen verschiedenen Währungen umrechnen möchten, und er bietet eine intuitive Benutzeroberfläche, die sowohl auf Desktop- als auch auf mobilen Geräten funktioniert.
