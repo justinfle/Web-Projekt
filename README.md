@@ -26,7 +26,7 @@ Die Anwendung verwendet folgende Technologien:
 - **HTML5**: Bietet die grundlegende Struktur der Seite und sorgt für eine klare und saubere Codebasis.
 - **CSS**: Verleiht der Seite ein modernes und benutzerfreundliches Design. Der Dark Mode und responsives Design werden ebenfalls mit CSS gesteuert.
 - **JavaScript**: Führt die Umrechnungslogik aus, interagiert mit der API und ermöglicht dynamische Interaktionen auf der Seite (Favoriten speichern, Verlauf anzeigen, Diagramme darstellen).
-- **Chart.js**: Ein leistungsstarkes Tool zur Visualisierung von Wechselkursen. Es wird verwendet, um ein interaktives Diagramm anzuzeigen, das das Verhältnis der gewählten Währungen zeigt.
+- **Chart.js**: Ein Tool zur Visualisierung von Wechselkursen. Es wird verwendet, um ein interaktives Diagramm anzuzeigen, das das Verhältnis der gewählten Währungen zeigt.
 - **Open Exchange Rates API**: Stellt aktuelle Wechselkurse für eine Vielzahl von Währungen bereit.
 
 ---
