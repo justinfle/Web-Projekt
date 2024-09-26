@@ -18,7 +18,7 @@ Diese Währungsrechner-Anwendung bietet folgende Features:
 
 ---
 
-## 2. Technologie-Stack 🛠️
+## 2. Technologie-Stack 
 
 Die Anwendung verwendet folgende Technologien:
 
@@ -36,7 +36,7 @@ Die Anwendung verwendet folgende Technologien:
 - Eine **Internetverbindung**, um die Wechselkurse über die API abzurufen.
 
 
-## 4. Benutzung der Anwendung 🚀
+## 4. Benutzung der Anwendung 
 Die Anwendung ist einfach zu bedienen und bietet viele nützliche Funktionen:
 
 Schritt 1: Betrag eingeben
@@ -57,7 +57,7 @@ Die Anwendung speichert die letzten fünf Umrechnungen im Verlauf, sodass du lei
 Schritt 6: Diagrammanzeige
 Nach jeder Umrechnung wird ein Diagramm angezeigt, das das Verhältnis zwischen der Ausgangs- und der Zielwährung zeigt. Diese visuelle Darstellung hilft dir, die Wechselkurse besser zu verstehen.
 
-## 5. Projektstruktur 📂
+## 5. Projektstruktur 
 Das Projekt ist in folgende Dateien und Ordner strukturiert:
 
 design.html: Die Haupt-HTML-Datei, die die Struktur der Seite enthält.
