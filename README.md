@@ -1,12 +1,12 @@
 # Web-Projekt
  
-# Währungsrechner 🌍💱
+# Währungsrechner 
 
 Ein umfassendes Tool zur Umrechnung von Währungen, das Echtzeit-Wechselkurse über die **Open Exchange Rates API** verwendet und zusätzliche Funktionen wie **Favoriten**, **Verlauf**, **Diagramm-Darstellungen** und einen **Dark Mode** bietet. Dieser Währungsrechner ist ideal für Benutzer, die schnell und zuverlässig zwischen verschiedenen Währungen umrechnen möchten, und er bietet eine intuitive Benutzeroberfläche, die sowohl auf Desktop- als auch auf mobilen Geräten funktioniert.
 
 ---
 
-## 1. Funktionen ✨
+## 1. Funktionen 
 
 Diese Währungsrechner-Anwendung bietet folgende Features:
 
@@ -19,7 +19,7 @@ Diese Währungsrechner-Anwendung bietet folgende Features:
 
 ---
 
-## 2. Technologie-Stack 🛠️
+## 2. Technologie-Stack 
 
 Die Anwendung verwendet folgende Technologien:
 
@@ -31,7 +31,7 @@ Die Anwendung verwendet folgende Technologien:
 
 ---
 
-## 3. Installation und Einrichtung 📥
+## 3. Installation und Einrichtung 
 
 ### Voraussetzungen
 
@@ -58,14 +58,14 @@ Code kopieren
 const apiKey = 'DEIN_API_KEY';
 Starten der Anwendung: Öffne die Datei design.html in deinem Webbrowser.
 
-4. API-Konfiguration 🔑
+4. API-Konfiguration 
 Dieses Projekt nutzt die Open Exchange Rates API, um aktuelle Wechselkurse zu beziehen. Es gibt verschiedene Tarife für die API, darunter einen kostenlosen Tarif, der tägliche Wechselkurse bietet.
 
 API-Schlüssel erhalten
 Registrierung: Gehe zu Open Exchange Rates und erstelle ein Konto.
 API-Schlüssel generieren: Sobald du registriert bist, kannst du im Dashboard einen API-Schlüssel erstellen.
 Schlüssel in script.js einfügen: Füge deinen API-Schlüssel wie oben beschrieben ein, um die API-Anfragen erfolgreich zu machen.
-5. Benutzung der Anwendung 🚀
+5. Benutzung der Anwendung 
 Die Anwendung ist einfach zu bedienen und bietet viele nützliche Funktionen:
 
 Schritt 1: Betrag eingeben
@@ -86,14 +86,14 @@ Die Anwendung speichert die letzten fünf Umrechnungen im Verlauf, sodass du lei
 Schritt 6: Diagrammanzeige
 Nach jeder Umrechnung wird ein Diagramm angezeigt, das das Verhältnis zwischen der Ausgangs- und der Zielwährung zeigt. Diese visuelle Darstellung hilft dir, die Wechselkurse besser zu verstehen.
 
-6. Projektstruktur 📂
+6. Projektstruktur 
 Das Projekt ist in folgende Dateien und Ordner strukturiert:
 
 design.html: Die Haupt-HTML-Datei, die die Struktur der Seite enthält.
 styles.css: Diese Datei enthält das gesamte Styling der Anwendung, einschließlich des Dark Modes.
 script.js: Enthält die JavaScript-Logik für das Abrufen der Wechselkurse, die Umrechnung und die Verwaltung des Verlaufs und der Favoriten.
 chart.js: Die Chart.js-Bibliothek wird verwendet, um das Wechselkursdiagramm zu erstellen.
-7. Detaillierte Funktionsweise ⚙️
+7. Detaillierte Funktionsweise 
 Währungsumrechnung
 Die Währungsumrechnung erfolgt durch einen einfachen Klick auf den „Umrechnen“-Button, nachdem der Benutzer die Ausgangs- und Zielwährung ausgewählt hat. Die Anwendung verwendet den aktuellen Wechselkurs, um die Umrechnung durchzuführen, und gibt das Ergebnis im unteren Teil der Seite aus.
 
