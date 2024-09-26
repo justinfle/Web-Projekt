@@ -38,33 +38,7 @@ Die Anwendung verwendet folgende Technologien:
 - Ein **moderner Webbrowser** wie Chrome, Firefox, Edge oder Safari.
 - Eine **Internetverbindung**, um die Wechselkurse über die API abzurufen.
 
-### Schritte zur Installation:
 
-1. **Repository klonen**:
-   Zuerst musst du das GitHub-Repository klonen. Führe dazu folgenden Befehl in deiner Kommandozeile aus:
-   ```bash
-   git clone https://github.com/DEIN_GITHUB_USERNAME/waehrungsrechner.git
-Navigiere ins Verzeichnis: Wechsle in das Verzeichnis des Projekts:
-
-bash
-Code kopieren
-cd waehrungsrechner
-API-Schlüssel konfigurieren: Du benötigst einen API-Schlüssel von Open Exchange Rates, um die Wechselkurse abzurufen.
-
-Registriere dich bei Open Exchange Rates und erhalte einen kostenlosen API-Schlüssel.
-Öffne die Datei script.js und ersetze die Variable apiKey durch deinen eigenen API-Schlüssel:
-javascript
-Code kopieren
-const apiKey = 'DEIN_API_KEY';
-Starten der Anwendung: Öffne die Datei design.html in deinem Webbrowser.
-
-4. API-Konfiguration 
-Dieses Projekt nutzt die Open Exchange Rates API, um aktuelle Wechselkurse zu beziehen. Es gibt verschiedene Tarife für die API, darunter einen kostenlosen Tarif, der tägliche Wechselkurse bietet.
-
-API-Schlüssel erhalten
-Registrierung: Gehe zu Open Exchange Rates und erstelle ein Konto.
-API-Schlüssel generieren: Sobald du registriert bist, kannst du im Dashboard einen API-Schlüssel erstellen.
-Schlüssel in script.js einfügen: Füge deinen API-Schlüssel wie oben beschrieben ein, um die API-Anfragen erfolgreich zu machen.
 5. Benutzung der Anwendung 
 Die Anwendung ist einfach zu bedienen und bietet viele nützliche Funktionen:
 
