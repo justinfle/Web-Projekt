@@ -39,7 +39,7 @@ Die Anwendung verwendet folgende Technologien:
 - Eine **Internetverbindung**, um die Wechselkurse über die API abzurufen.
 
 
-5. Benutzung der Anwendung 
+## 5. Benutzung der Anwendung 
 Die Anwendung ist einfach zu bedienen und bietet viele nützliche Funktionen:
 
 Schritt 1: Betrag eingeben
@@ -60,20 +60,11 @@ Die Anwendung speichert die letzten fünf Umrechnungen im Verlauf, sodass du lei
 Schritt 6: Diagrammanzeige
 Nach jeder Umrechnung wird ein Diagramm angezeigt, das das Verhältnis zwischen der Ausgangs- und der Zielwährung zeigt. Diese visuelle Darstellung hilft dir, die Wechselkurse besser zu verstehen.
 
-6. Projektstruktur 
+## 6. Projektstruktur 
 Das Projekt ist in folgende Dateien und Ordner strukturiert:
 
 design.html: Die Haupt-HTML-Datei, die die Struktur der Seite enthält.
 styles.css: Diese Datei enthält das gesamte Styling der Anwendung, einschließlich des Dark Modes.
 script.js: Enthält die JavaScript-Logik für das Abrufen der Wechselkurse, die Umrechnung und die Verwaltung des Verlaufs und der Favoriten.
 chart.js: Die Chart.js-Bibliothek wird verwendet, um das Wechselkursdiagramm zu erstellen.
-7. Detaillierte Funktionsweise 
-Währungsumrechnung
-Die Währungsumrechnung erfolgt durch einen einfachen Klick auf den „Umrechnen“-Button, nachdem der Benutzer die Ausgangs- und Zielwährung ausgewählt hat. Die Anwendung verwendet den aktuellen Wechselkurs, um die Umrechnung durchzuführen, und gibt das Ergebnis im unteren Teil der Seite aus.
-
-Favoriten und Verlauf
-Der Verlauf speichert die letzten fünf Umrechnungen und zeigt diese dem Benutzer an. Mit einem Klick auf den Stern können Umrechnungen als Favorit gespeichert werden, um einen schnellen Zugriff darauf zu ermöglichen.
-
-Diagrammanzeige
-Nach jeder Umrechnung zeigt die Anwendung ein Diagramm an, das den Wechselkurs zwischen den beiden gewählten Währungen visualisiert. Dieses Diagramm wird mithilfe der Chart.js-Bibliothek erstellt und dynamisch aktualisiert.
 
